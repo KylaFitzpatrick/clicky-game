@@ -5,15 +5,25 @@ import React from "react";
 
 function CardBody(props) {
   return (
-    <div className="card-body">
-      <p className="card-text">Click Count: {props.count}</p>
-      <button className="btn btn-primary" onClick={props.handleIncrement}>
-        Increment
-      </button>{" "}
-      <button className="btn btn-danger" onClick={props.handleDecrement}>
-        Decrement
-      </button>
-    </div>
+    // <nav>
+    // <div class="nav-wrapper">
+    //   <a href="#" class="brand-logo">Clicky-Game</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html"></a></li>
+        <li>Your Score: {props.score}</li>
+        <li>Total Score: {props.totalScore}</li>
+      </ul>
+  //   </div>
+  // </nav>
+    // <div className="card-body">
+    //   <p className="card-text">Click Count: {props.count}</p>
+    //   <button className="btn btn-primary" onClick={props.handleIncrement}>
+    //     Increment
+    //   </button>{" "}
+    //   <button className="btn btn-danger" onClick={props.handleDecrement}>
+    //     Decrement
+    //   </button>
+    // </div>
   );
 }
 

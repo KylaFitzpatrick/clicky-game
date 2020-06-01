@@ -22,16 +22,17 @@ class App extends Component {
   render() {
     return (
       <div>
-          <nav>
+        <Counter/>
+          {/* <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Clicky-Game</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+        <li><a href="sass.html"></a></li>
+        <li><a href="badges.html">Your Score:</a></li>
+        <li><a href="collapsible.html">Total Score:</a></li>
       </ul>
     </div>
-  </nav>
+  </nav> */}
       <Wrapper>
         {/* <Title>Friends List</Title> */}
         {this.state.friends.map(friend => (
@@ -39,10 +40,10 @@ class App extends Component {
             removeFriend={this.removeFriend}
             id={friend.id}
             key={friend.id}
-            name={friend.name}
+            // name={friend.name}
             image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
+            // occupation={friend.occupation}
+            // location={friend.location}
           />
         ))}
       </Wrapper>
