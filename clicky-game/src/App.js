@@ -24,17 +24,23 @@ class App extends Component {
     // Filter this.state.animals for animals with an id equal to the id then suffle
     let chosenAnimalIds = this.state.chosenAnimalIds
     if (chosenAnimalIds.includes(id)) {
-      this.setState({ chosenAnimalIds: [], score: 0, topScore: chosenAnimalIds.length, msg: "You guessed incorrectly! Click to play again" });
+      this.setState({ chosenAnimalIds: [], score: 0, msg: "You guessed incorrectly! Click to play again" });
       return;
     } else {
       chosenAnimalIds.push(id)
+//top score is less than score display dont display score if top score if greater than score display topscore
+let topScore = this.state.topScore
+let score = this.state.score
 
+if(chosenAnimalIds.includes(id) && topScore.valueOf() < score.valueOf()){
+  this.setState({topScore: chosenAnimalIds.length})
+}
       if (chosenAnimalIds.length === 12) {
         this.setState({ score: 12, msg: "You guessed correctly! Click to play again", chosenAnimalIds: [] });
         console.log('Winner');
         return;
       }
-      this.setState({ animals, chosenAnimalIds, score: chosenAnimalIds.length, topScore: chosenAnimalIds.length, msg: " " });
+      this.setState({ animals, chosenAnimalIds, score: chosenAnimalIds.length, msg: " " });
 
       for (let i = animals.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
