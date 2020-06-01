@@ -70,6 +70,7 @@ if(chosenAnimalIds.includes(id) && topScore.valueOf() < score.valueOf()){
               id={animal.id}
               key={animal.id}
               image={animal.image}
+              alt={animal.name}
             />
           ))}
         </Wrapper>

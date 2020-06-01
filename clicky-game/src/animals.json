@@ -7,56 +7,56 @@
   {
     "id": 2,
     "name": "Elephants",
-    "image": "https://images.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "image": "https://images.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=200"
   },
   {
     "id": 3,
     "name": "Parrots",
-    "image": "https://images.pexels.com/photos/37833/rainbow-lorikeet-parrots-australia-rainbow-37833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "image": "https://images.pexels.com/photos/37833/rainbow-lorikeet-parrots-australia-rainbow-37833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160&w=300"
   },
   {
     "id": 4,
     "name": "Giraffes",
-    "image": "https://images.pexels.com/photos/34098/south-africa-hluhluwe-giraffes-pattern.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "image": "https://images.pexels.com/photos/34098/south-africa-hluhluwe-giraffes-pattern.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
   },
   {
     "id": 5,
     "name": "Rabbits",
-    "image": "https://images.pexels.com/photos/33152/european-rabbits-bunnies-grass-wildlife.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "image": "https://images.pexels.com/photos/33152/european-rabbits-bunnies-grass-wildlife.jpg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=200"
   },
   {
     "id": 6,
     "name": "Koala",
-    "image": "https://images.pexels.com/photos/146083/pexels-photo-146083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "image": "https://images.pexels.com/photos/146083/pexels-photo-146083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=300"
   },
   {
     "id": 7,
     "name": "Tiger",
-    "image": "https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "image": "https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=200"
   },
   {
     "id": 8,
     "name": "Fish",
-    "image": "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "image": "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=200"
   },
   {
     "id": 9,
     "name": "Puppies",
-    "image": "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "image": "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=180"
   },
   {
     "id": 10,
     "name": "Penguin",
-    "image": "https://images.pexels.com/photos/52509/penguins-emperor-antarctic-life-52509.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "image": "https://images.pexels.com/photos/52509/penguins-emperor-antarctic-life-52509.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=200"
   },
   {
     "id": 11,
     "name": "Jelly Fish",
-    "image": "https://images.pexels.com/photos/982230/pexels-photo-982230.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "image": "https://images.pexels.com/photos/982230/pexels-photo-982230.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=200"
   },
   {
     "id": 12,
     "name": "Dolphin",
-    "image": "https://images.pexels.com/photos/64219/dolphin-marine-mammals-water-sea-64219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "image": "https://images.pexels.com/photos/64219/dolphin-marine-mammals-water-sea-64219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=200"
   }
 ]
