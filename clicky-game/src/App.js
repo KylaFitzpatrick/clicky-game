@@ -10,7 +10,13 @@ class App extends Component {
   state = {
     friends
   };
+//update score and total score
+//if user clicks card not already choosen increase score and top score
+//if user clicks card already choosen restart game and clear score and if score 
+//is greater than top score replace top score
 
+//shuffle the cards after click
+//if card clicked then shuffle cards
   removeFriend = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
     const friends = this.state.friends.filter(friend => friend.id !== id);
