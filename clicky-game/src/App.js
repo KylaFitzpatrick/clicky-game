@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Counter from "./components/Counter";
 import friends from "./friends.json";
 
 class App extends Component {
@@ -20,8 +21,19 @@ class App extends Component {
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
+      <div>
+          <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Clicky-Game</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
       <Wrapper>
-        <Title>Friends List</Title>
+        {/* <Title>Friends List</Title> */}
         {this.state.friends.map(friend => (
           <FriendCard
             removeFriend={this.removeFriend}
@@ -34,6 +46,15 @@ class App extends Component {
           />
         ))}
       </Wrapper>
+      <footer class="page-footer">
+      <div class="footer-copyright">
+      <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+            </div>
+            </footer>
+      </div>
     );
   }
 }
