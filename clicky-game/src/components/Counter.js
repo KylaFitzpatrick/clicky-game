@@ -1,19 +1,19 @@
 import React from "react";
-import CardBody from "./CardBody";
+// import Score from "./Score";
 
 // By extending the React.Component class, Counter inherits functionality from it
 class Counter extends React.Component {
   // Setting the initial state of the Counter component
   state = {
     score: 0,
-    totalScore: 0
+    topScore: 0
   };
 
   // handleIncrement increases this.state.count by 1
   handleIncrement = () => {
     // We always use the setState method to update a component's state
     this.setState({ score: this.state.score + 1 });
-    this.setState({ totalScore: this.state.totalScore + 1 });
+    this.setState({ topScore: this.state.topScore + 1 });
   };
 
   // // handleDecrement decreases this.state.count by 1
@@ -29,14 +29,14 @@ class Counter extends React.Component {
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Clicky-Game</a>
         {/* </div> */}
-        <CardBody
+        <Score
           score={this.state.score}
-          totalScore={this.state.totalScore}
-          handleIncrement={this.handleIncrement}
-          // handleDecrement={this.handleDecrement}
+          topScore={this.state.topScore}
+         
         />
       </div>
   </nav>
+  
     );
   }
 }
