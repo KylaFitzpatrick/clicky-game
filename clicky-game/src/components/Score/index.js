@@ -7,16 +7,16 @@ import "./style.css";
 function Score(props) {
   return (
     <>
-  <nav>
-    <div className="nav-wrapper">
-      <ul className="row">
-      <li  className="col s4">Clicky Game</li>
-        <li id="msg" className="col s4">{props.msg}</li>
-        <li id="score" className="col s4">Score: {props.score} Top Score: {props.topScore}</li>
-      </ul>
-    </div>
-  </nav>
-         </>
+      <nav>
+        <div className="nav-wrapper">
+          <ul className="row">
+            <li className="col s4">Clicky Game</li>
+            <li id="msg" className="col s4">{props.msg}</li>
+            <li id="score" className="col s4">Score: {props.score} Top Score: {props.topScore}</li>
+          </ul>
+        </div>
+      </nav>
+    </>
   );
 }
 

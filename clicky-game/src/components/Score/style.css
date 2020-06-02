@@ -1,3 +1,17 @@
 
+.nav-wrapper{
+  background-color: rgb(237, 148, 16);
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+}
+ 
+.nav-wrapper ul li{ 
+  text-align: center;
+  font-size: 20px;
+ } 
+
+nav ul li#msg{
+  color: purple;
+} 
+
 
 

@@ -9,7 +9,7 @@ class App extends Component {
   state = {
     score: 0,
     topScore: 0,
-    msg: "Click to play!",
+    msg: "Click an image!",
     animals,
     chosenAnimalIds: []
   };
@@ -24,24 +24,24 @@ class App extends Component {
     // Filter this.state.animals for animals with an id equal to the id then suffle
     let chosenAnimalIds = this.state.chosenAnimalIds
     if (chosenAnimalIds.includes(id)) {
-      this.setState({ chosenAnimalIds: [], score: 0, msg: "You guessed incorrectly! Click to play again" });
+      this.setState({ chosenAnimalIds: [], score: 0, msg: "You guessed incorrectly!" });
       return;
     } else {
       chosenAnimalIds.push(id)
-//top score is less than score display dont display score if top score if greater than score display topscore
-let topScore = this.state.topScore
-let score = this.state.score
+      //top score is less than score display dont display score if top score if greater than score display topscore
+      let topScore = this.state.topScore
+      let score = this.state.score
 
-if(chosenAnimalIds.includes(id) && topScore === score){
-  this.setState({topScore: topScore + 1, score: score + 1})
-}
+      if (chosenAnimalIds.includes(id) && topScore === score) {
+        this.setState({ topScore: topScore + 1, score: score + 1 })
+      }
       if (chosenAnimalIds.length === 12) {
-        this.setState({ score: 12, msg: "You guessed correctly! Click to play again", chosenAnimalIds: [] });
+        this.setState({ score: 12, msg: "You win!", chosenAnimalIds: [] });
         console.log('Winner');
         return;
       }
-      let newAnimals = animals.sort((a,b)=>Math.random()-0.5)
-      this.setState({ animals:newAnimals, chosenAnimalIds, score: chosenAnimalIds.length, msg: " " });
+      // let newAnimals = animals.sort((a,b)=>Math.random()-0.5)
+      this.setState({ animals, chosenAnimalIds, score: chosenAnimalIds.length, msg: "You guessed correctly!" });
 
 
     };
@@ -50,14 +50,14 @@ if(chosenAnimalIds.includes(id) && topScore === score){
   // Map over this.state.animals and render a AnimalCard component for each animal object
   render() {
     return (
-      <div>
-       
-            <Score
-              score={this.state.score}
-              topScore={this.state.topScore}
-              msg={this.state.msg}
-            />
-        
+      <div >
+
+        <Score
+          score={this.state.score}
+          topScore={this.state.topScore}
+          msg={this.state.msg}
+        />
+
         <Wrapper>
           {this.state.animals.map(animal => (
             <AnimalCard
@@ -69,6 +69,7 @@ if(chosenAnimalIds.includes(id) && topScore === score){
             />
           ))}
         </Wrapper>
+        
         <footer className="page-footer">
           <div className="footer-copyright">
             <div className="container">
