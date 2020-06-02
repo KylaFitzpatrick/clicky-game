@@ -17,7 +17,7 @@
   {
     "id": 4,
     "name": "Giraffes",
-    "image": "https://images.pexels.com/photos/34098/south-africa-hluhluwe-giraffes-pattern.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
+    "image": "https://images.pexels.com/photos/34098/south-africa-hluhluwe-giraffes-pattern.jpg?auto=compress&cs=tinysrgb&dpr=2&h=210&w=210"
   },
   {
     "id": 5,
@@ -27,12 +27,12 @@
   {
     "id": 6,
     "name": "Koala",
-    "image": "https://images.pexels.com/photos/146083/pexels-photo-146083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=300"
+    "image": "https://images.pexels.com/photos/146083/pexels-photo-146083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=210&w=300"
   },
   {
     "id": 7,
     "name": "Tiger",
-    "image": "https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=200"
+    "image": "https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160&w=160"
   },
   {
     "id": 8,

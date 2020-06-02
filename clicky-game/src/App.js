@@ -32,20 +32,17 @@ class App extends Component {
 let topScore = this.state.topScore
 let score = this.state.score
 
-if(chosenAnimalIds.includes(id) && topScore.valueOf() < score.valueOf()){
-  this.setState({topScore: chosenAnimalIds.length})
+if(chosenAnimalIds.includes(id) && topScore === score){
+  this.setState({topScore: topScore + 1, score: score + 1})
 }
       if (chosenAnimalIds.length === 12) {
         this.setState({ score: 12, msg: "You guessed correctly! Click to play again", chosenAnimalIds: [] });
         console.log('Winner');
         return;
       }
-      this.setState({ animals, chosenAnimalIds, score: chosenAnimalIds.length, msg: " " });
+      let newAnimals = animals.sort((a,b)=>Math.random()-0.5)
+      this.setState({ animals:newAnimals, chosenAnimalIds, score: chosenAnimalIds.length, msg: " " });
 
-      for (let i = animals.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [animals[i], animals[j]] = [animals[j], animals[i]];
-      }
 
     };
   }
@@ -54,15 +51,13 @@ if(chosenAnimalIds.includes(id) && topScore.valueOf() < score.valueOf()){
   render() {
     return (
       <div>
-        <nav>
-          <div class="nav-wrapper">
+       
             <Score
               score={this.state.score}
               topScore={this.state.topScore}
               msg={this.state.msg}
             />
-          </div>
-        </nav>
+        
         <Wrapper>
           {this.state.animals.map(animal => (
             <AnimalCard
@@ -74,10 +69,10 @@ if(chosenAnimalIds.includes(id) && topScore.valueOf() < score.valueOf()){
             />
           ))}
         </Wrapper>
-        <footer class="page-footer">
-          <div class="footer-copyright">
-            <div class="container">
-              © 2014 Copyright Clicky Game
+        <footer className="page-footer">
+          <div className="footer-copyright">
+            <div className="container">
+              © 2020 Copyright Clicky Game
             </div>
           </div>
         </footer>
