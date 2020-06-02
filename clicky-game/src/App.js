@@ -9,7 +9,7 @@ class App extends Component {
   state = {
     score: 0,
     topScore: 0,
-    msg: "",
+    msg: "Click to play!",
     animals,
     chosenAnimalIds: []
   };
