@@ -20,7 +20,7 @@ class App extends Component {
   //if user clicks card not already choosen increase score and top score
   //if user clicks card already choosen restart game and clear score and if score 
   //is greater than top score replace top score
-  shuffleAnimalCard = id => {
+  shuffleAnimalCard = (id) => {
     // Filter this.state.animals for animals with an id equal to the id then suffle
     let chosenAnimalIds = this.state.chosenAnimalIds
     if (chosenAnimalIds.includes(id)) {
@@ -40,8 +40,8 @@ class App extends Component {
         console.log('Winner');
         return;
       }
-      // let newAnimals = animals.sort((a,b)=>Math.random()-0.5)
-      this.setState({ animals, chosenAnimalIds, score: chosenAnimalIds.length, msg: "You guessed correctly!" });
+      let newAnimals = animals.sort((a,b)=>Math.random()-0.5)
+      this.setState({ animals:newAnimals, chosenAnimalIds, score: score + 1, msg: "You guessed correctly!" });
 
 
     };
