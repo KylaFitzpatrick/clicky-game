@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import AnimalCard from "./components/AnimalCard";
 import Wrapper from "./components/Wrapper";
-import Score from "./components/Score";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import animals from "./animals.json";
 
 class App extends Component {
@@ -44,15 +45,15 @@ class App extends Component {
       this.setState({ animals:newAnimals, chosenAnimalIds, score: score + 1, msg: "You guessed correctly!" });
 
 
-    };
+    }; 
   }
 
   // Map over this.state.animals and render a AnimalCard component for each animal object
   render() {
     return (
-      <div >
+      <div>
 
-        <Score
+        <Nav
           score={this.state.score}
           topScore={this.state.topScore}
           msg={this.state.msg}
@@ -69,14 +70,7 @@ class App extends Component {
             />
           ))}
         </Wrapper>
-        
-        <footer className="page-footer">
-          <div className="footer-copyright">
-            <div className="container">
-              © 2020 Copyright Clicky Game
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     );
 
