@@ -1,6 +1,6 @@
 
 .nav-wrapper{
-  background-color: rgb(237, 148, 16);
+  background-color: rgb(4, 102, 56);
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
  
@@ -10,7 +10,7 @@
  } 
 
 nav ul li#msg{
-  color: purple;
+  color: rgb(12, 166, 248);
 } 
 
 

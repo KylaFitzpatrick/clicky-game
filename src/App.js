@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import AnimalCard from "./components/AnimalCard";
 import Wrapper from "./components/Wrapper";
 import Nav from "./components/Nav";
+import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import animals from "./animals.json";
 
@@ -58,7 +59,9 @@ class App extends Component {
           topScore={this.state.topScore}
           msg={this.state.msg}
         />
-
+        
+        <Hero />
+       
         <Wrapper>
           {this.state.animals.map(animal => (
             <AnimalCard
