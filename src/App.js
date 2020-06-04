@@ -9,24 +9,19 @@ import animals from "./animals.json";
 class App extends Component {
   // Setting this.state.animals to the animals json array
   state = {
-    score: 0,
+    score: 10,
     topScore: 0,
     msg: "Click an image!",
     animals,
-    chosenAnimalIds: []
+    chosenAnimalIds: [],
+    textColor: "rgb(12, 201, 243)"
   };
-
-  //shuffle the cards after click
-  //if card clicked then shuffle cards
-  //update score and total score
-  //if user clicks card not already choosen increase score and top score
-  //if user clicks card already choosen restart game and clear score and if score 
-  //is greater than top score replace top score
+  
   shuffleAnimalCard = (id) => {
     // Filter this.state.animals for animals with an id equal to the id then suffle
     let chosenAnimalIds = this.state.chosenAnimalIds
     if (chosenAnimalIds.includes(id)) {
-      this.setState({ chosenAnimalIds: [], score: 0, msg: "Incorrect!" });
+      this.setState({ chosenAnimalIds: [], score: 0, msg: "Incorrect!", textColor: "red" });
       return;
     } else {
       chosenAnimalIds.push(id)
@@ -37,14 +32,13 @@ class App extends Component {
       if (chosenAnimalIds.includes(id) && topScore === score) {
         this.setState({ topScore: topScore + 1, score: score + 1 })
       }
-      if (chosenAnimalIds.length === 12) {
-        this.setState({ score: 12, msg: "You win!", chosenAnimalIds: [] });
+      if (score === 12) {
+        this.setState({ msg: "You win!", chosenAnimalIds: [], textColor: "yellow" });
         console.log('Winner');
         return;
       }
       let newAnimals = animals.sort((a,b)=>Math.random()-0.5)
-      this.setState({ animals:newAnimals, chosenAnimalIds, score: score + 1, msg: "Correct!" });
-
+      this.setState({ animals:newAnimals, chosenAnimalIds, score: score + 1, msg: "Correct!", textColor: "green" });
 
     }; 
   }
@@ -58,6 +52,7 @@ class App extends Component {
           score={this.state.score}
           topScore={this.state.topScore}
           msg={this.state.msg}
+          textColor={this.state.textColor}
         />
         
         <Hero />

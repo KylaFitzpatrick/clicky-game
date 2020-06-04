@@ -1,6 +1,6 @@
 
 .nav-wrapper{
-  background-color: rgb(4, 102, 56);
+  background-color: rgb(0, 0, 0);
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
  
@@ -9,9 +9,7 @@
   font-size: 20px;
  } 
 
-nav ul li#msg{
-  color: rgb(12, 201, 243);
-} 
+
 
 
 

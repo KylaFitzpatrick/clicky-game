@@ -11,7 +11,7 @@ function Score(props) {
         <div className="nav-wrapper">
           <ul className="row">
             <li className="col s4">Clicky Game</li>
-            <li id="msg" className="col s4">{props.msg}</li>
+            <li id="msg" className="col s4" style={{color: `${props.textColor}`}}>{props.msg}</li>
             <li id="score" className="col s4">Score: {props.score} Top Score: {props.topScore}</li>
           </ul>
         </div>
