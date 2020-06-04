@@ -9,7 +9,7 @@ import animals from "./animals.json";
 class App extends Component {
   // Setting this.state.animals to the animals json array
   state = {
-    score: 10,
+    score: 0,
     topScore: 0,
     msg: "Click an image!",
     animals,
