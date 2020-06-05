@@ -21,7 +21,7 @@ class App extends Component {
     // Filter this.state.animals for animals with an id equal to the id then suffle
     let chosenAnimalIds = this.state.chosenAnimalIds
     if (chosenAnimalIds.includes(id)) {
-      this.setState({ chosenAnimalIds: [], score: 0, msg: "Incorrect!", textColor: "red" });
+      this.setState({ score: 0, msg: "Incorrect!", chosenAnimalIds: [], textColor: "red" });
       return;
     } else {
       chosenAnimalIds.push(id)
@@ -37,8 +37,9 @@ class App extends Component {
         console.log('Winner');
         return;
       }
+      
       let newAnimals = animals.sort((a,b)=>Math.random()-0.5)
-      this.setState({ animals:newAnimals, chosenAnimalIds, score: score + 1, msg: "Correct!", textColor: "green" });
+      this.setState({ score: score + 1, msg: "Correct!", animals:newAnimals, chosenAnimalIds, textColor: "green" });
 
     }; 
   }
