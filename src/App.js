@@ -17,7 +17,7 @@ class App extends Component {
     textColor: "rgb(12, 201, 243)"
   };
   
-  shuffleAnimalCard = (id) => {
+  sortAnimalCard = (id) => {
     // Filter this.state.animals for animals with an id equal to the id then suffle
     let chosenAnimalIds = this.state.chosenAnimalIds
     if (chosenAnimalIds.includes(id)) {
@@ -37,7 +37,7 @@ class App extends Component {
         console.log('Winner');
         return;
       }
-      
+
       let newAnimals = animals.sort((a,b)=>Math.random()-0.5)
       this.setState({ score: score + 1, msg: "Correct!", animals:newAnimals, chosenAnimalIds, textColor: "green" });
 
@@ -61,7 +61,7 @@ class App extends Component {
         <Wrapper>
           {this.state.animals.map(animal => (
             <AnimalCard
-              shuffleAnimalCard={this.shuffleAnimalCard}
+              sortAnimalCard={this.sortAnimalCard}
               id={animal.id}
               key={animal.id}
               image={animal.image}
