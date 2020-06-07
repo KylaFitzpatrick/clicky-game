@@ -20,16 +20,18 @@ class App extends Component {
   sortAnimalCard = (id) => {
     // Filter this.state.animals for animals with an id equal to the id then suffle
     let chosenAnimalIds = this.state.chosenAnimalIds
+
     if (chosenAnimalIds.includes(id)) {
       this.setState({ score: 0, msg: "Incorrect!", chosenAnimalIds: [], textColor: "red" });
-    } else {
+    }
+    else if(!chosenAnimalIds.includes(id)) {
       chosenAnimalIds.push(id)
       //top score is less than score display dont display score if top score if greater than score display topscore
       let topScore = this.state.topScore
       let score = this.state.score
 
       if (chosenAnimalIds.includes(id) && topScore === score) {
-        this.setState({ topScore: topScore + 1, score: score + 1 })
+        this.setState({ topScore: topScore + 1 })
       }
       if (score === 12) {
         this.setState({ msg: "You win!", chosenAnimalIds: [], textColor: "yellow" });
@@ -38,7 +40,7 @@ class App extends Component {
       let newAnimals = animals.sort((a,b)=>Math.random()-0.5)
       
       this.setState({ score: score + 1, msg: "Correct!", animals:newAnimals, chosenAnimalIds, textColor: "green" });
-
+    
     }; 
   }
 
