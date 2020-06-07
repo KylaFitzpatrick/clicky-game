@@ -18,7 +18,7 @@ class App extends Component {
   };
   
   sortAnimalCard = (id) => {
-    // Filter this.state.animals for animals with an id equal to the id then suffle
+    // If id chosen is equal to the id then incorrect
     let chosenAnimalIds = this.state.chosenAnimalIds
 
     if (chosenAnimalIds.includes(id)) {
@@ -26,7 +26,7 @@ class App extends Component {
     }
     else if(!chosenAnimalIds.includes(id)) {
       chosenAnimalIds.push(id)
-      //top score is less than score display dont display score if top score if greater than score display topscore
+     
       let topScore = this.state.topScore
       let score = this.state.score
 
