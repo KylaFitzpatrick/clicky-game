@@ -1,4 +1,5 @@
 # Clicky game
+![Clicky game](src/images/clickygame.png)
 
 ### About the app 
  This is a clicky game app with Create React App and is a memory game based on guessing animal images.
